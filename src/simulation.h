@@ -1159,9 +1159,9 @@ public:
         if (config->main_rotation == MAIN_ROTATION_AB) {
 
             if (config->ab_haste_stop && 1.0 / (config->ab_haste_stop/100.0 + 1) >= castHaste()) {
-                if (player->talents.imp_frostbolt < player->talents.imp_fireball)
+                if (player->talents.empowered_arcane_missiles < player->talents.imp_fireball)
                     return make_shared<spell::Fireball>();
-                return make_shared<spell::Frostbolt>();
+                return make_shared<spell::ArcaneMissiles>();
             }
 
             if (canBlast())
